@@ -312,7 +312,7 @@ class InterfaceConsulta:
 
 class Arquivo:
 
-    def ler(self, nome_arquivo='ativos.txt'):
+    def ler(self, nome_arquivo='.ativos.txt'):
         lista = []
 
         try:
@@ -325,7 +325,7 @@ class Arquivo:
                 lista.append(ticker.upper())
 
         except FileNotFoundError:
-            if nome_arquivo == 'ativos.txt':
+            if nome_arquivo == '.ativos.txt':
                 self.criar()
             else:
                 pass
@@ -333,19 +333,19 @@ class Arquivo:
             return lista
 
     def escrever(self):
-        with open('ativos.txt', 'a', encoding='UTF-8') as self.arquivo:
+        with open('.ativos.txt', 'a', encoding='UTF-8') as self.arquivo:
             ticker = consulta_corrente[0][0]
             self.arquivo.write(f'{ticker},\n')
         self.fechar()
 
     def reescrever(self, conteudo):
-        with open('ativos.txt', 'w+', encoding='UTF-8') as self.arquivo:
+        with open('.ativos.txt', 'w+', encoding='UTF-8') as self.arquivo:
             for ticker in conteudo:
                 self.arquivo.write(f'{ticker},\n')
         self.fechar()
 
     def criar(self):
-        with open('ativos.txt', 'x', encoding='UTF-8') as self.arquivo:
+        with open('.ativos.txt', 'x', encoding='UTF-8') as self.arquivo:
             pass
         self.fechar()
 
