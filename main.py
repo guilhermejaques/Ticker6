@@ -1,6 +1,7 @@
 from validos import ativos_validos
 import yfinance
 import customtkinter
+
 # v0.1.0
 
 # dividend yield (%) - retorno esperado:
