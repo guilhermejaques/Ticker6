@@ -1,7 +1,7 @@
 
 # Sobre o projeto
 
-Este programa é um projeto individual e que está em andamento e pode ser utilizado por estudantes ou até mesmo por investidores. Por trás da interface gráfica [(customtkinter)](https://github.com/TomSchimansky/CustomTkinter) existe um algoritmo que é simples e prático, foi escrito na linguagem de programação Python. Com o Ticker6 você poderá consultar a cotação das ações em tempo real e vizualizar o preço teto sem a necessidade de calcular e buscar os dados pela internet e também é possível armazenar os ativos favoritos em uma carteira. Por enquanto, o programa é dependente dos dados fornecidos pela biblioteca [yfinance](https://github.com/ranaroussi/yfinance) (Apache License). Faça o teste você mesmo (a) e Aproveite!
+Este programa é um projeto individual e que está em andamento e pode ser utilizado por estudantes ou até mesmo por investidores. Por trás da interface gráfica [(customtkinter)](https://github.com/TomSchimansky/CustomTkinter) existe um algoritmo que é muito simples e prático, escrito na linguagem de programação Python. Ticker6 é o nome do programa, e com ele você poderá consultar a cotação das ações em tempo real e vizualizar o preço teto sem a necessidade de calcular e buscar os dados pela internet e também é possível armazenar os ativos favoritos em uma carteira. Por enquanto, o programa é dependente dos dados fornecidos pela biblioteca [yfinance](https://github.com/ranaroussi/yfinance) (Apache License). Faça o teste você mesmo (a) e Aproveite!
 
 # O código
 
