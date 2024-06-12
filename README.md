@@ -23,10 +23,18 @@ Resumidamente, você precisará do arquivo `MAIN.py` que será executado e `VALI
 - Python 3.12
 - yfinance
 - customtkinter
+  
+---
+Você pode fazer o download das bibliotecas dentro do ambiente utilizando o arquivo `requirements.txt` que está no repositório, e com o comando: `pip install -r requirements.txt`, você fará a instalação das bibliotecas requisitadas diretamente. 
+
+Obviamente, também é possível fazer a instalação de cada uma das bibliotecas utilizando o PIP, visto que são apenas duas bibliotecas.
+
+
+
 
 # O que é o preço teto de uma ação?
 
-O Preço Teto é o valor máximo que um investidor está disposto a pagar por uma ação e faz parte de uma estratégia previdenciária que busca um retorno mínimo esperado de dividendos. Esse valor pode ser calculado de diferentes formas, dependendo do perfil do investidor. De maneira simples, utiliza-se os dividendos pagos por uma ação e o Dividend Yield desejado.
+O Preço Teto é o valor máximo que um  mples, utiliza-se os dividendos pagos por uma ação e o Dividend Yield desejado.
 
 Aqui, utilizamos o Método [Bazin](https://pt.wikipedia.org/wiki/D%C3%A9cio_Bazin) e consideramos a média de dividendos pagos durante 5 anos e um Dividend Yield esperado de 6%.
 
