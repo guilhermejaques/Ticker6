@@ -9,7 +9,7 @@ Este programa (Ticker6) é um projeto individual e que está em andamento e pode
   
 - Há duas variáveis destacadas no início do código, elas são importantes e podem ser alteradas, influenciando no cálculo gerado pelo programa. Por padrão, elas são definidas como: `dy = 0,06 (6%) | anos = 5`
   
-- O paradigma de orientação a objeto é utilizado, mesmo não sendo a melhor opção para simplificar casos específicos do código na condição atual - não sendo necessário em algumas partes - é perfeito para a escalabilidade do código.
+- O paradigma de orientação a objeto é utilizado, mesmo não sendo a melhor opção para simplificar casos específicos do código na condição atual - não sendo necessário em algumas partes - mas, é perfeito para a escalabilidade do código.
   
 - Sobre a modularização, o código principal executável é `MAIN.py` e faz requisição a uma lista de de ativos validos que está em `VALIDOS.py`.
   
