@@ -25,7 +25,7 @@ Resumidamente, você precisará do arquivo `MAIN.py` que será executado e `VALI
 - customtkinter
   
 ---
-Você pode fazer o download das bibliotecas dentro do ambiente utilizando o arquivo `requirements.txt` que está no repositório, e com o comando: `pip install -r requirements.txt`, você fará a instalação das bibliotecas requisitadas diretamente. 
+Você pode fazer o download das bibliotecas dentro do ambiente utilizando o arquivo `requirements.txt` que está no repositório, e com o comando: `pip install -r requirements.txt` você fará a instalação das bibliotecas requisitadas diretamente do arquivo. 
 
 Obviamente, também é possível fazer a instalação de cada uma das bibliotecas utilizando o PIP, visto que são apenas duas bibliotecas.
 
