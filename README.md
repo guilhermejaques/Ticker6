@@ -1,16 +1,44 @@
-O Preço Teto é o valor máximo que um investidor está disposto a pagar por uma ação, e faz parte de uma estratégia previdenciária para um retorno esperado de dividendos.
-O valor pode ser calculado de formas diferentes, dependendo do perfil do investidor. De maneira simples, utiliza-se os dividendos pagos por uma ação e o Dividend Yield desejado.
-Por aqui, utilizamos o Método Bazin e consideramos a média de dividendos pagos durante 5 anos  e um Dividend Yield esperado de 6%. 
+
+# Sobre o projeto
+
+Este programa (Ticker6) é um projeto individual e que está em andamento e pode ser utilizado por estudantes ou até mesmo por investidores. Por trás da interface gráfica [(customtkinter)](https://github.com/TomSchimansky/CustomTkinter) existe um algoritmo que é simples e prático, foi escrito na linguagem de programação Python e, por enquanto, é dependente dos dados fornecidos pela biblioteca [yfinance](https://github.com/ranaroussi/yfinance) (Apache License). Aproveite!
+
+# O código
+
+- O código foi escrito propositalmente em português (sem considerar as palavras reservadas em inglês da própria linguagem).
+  
+- Há duas variáveis destacadas no início do código, elas são importantes e podem ser alteradas, influenciando no cálculo gerado pelo programa. Por padrão, elas são definidas como: `dy = 0,06 (6%) | anos = 5`
+  
+- O paradigma de orientação a objeto é utilizado, mesmo não sendo a melhor opção para simplificar casos específicos do código na condição atual - não sendo necessário em algumas partes - é perfeito para a escalabilidade do código.
+  
+- Sobre a modularização, o código principal executável é `MAIN.py` e faz requisição a uma lista de de ativos validos que está em `VALIDOS.py`.
+  
+- O código faz a criação de um arquivo `ativos.txt` onde estará registrado todos os ativos permanentes que o usuário definir dentro do programa. 
+
+# Como usar?
+
+Resumidamente, você precisará do arquivo `MAIN.py` que será executado e `VALIDOS.py` que é necessário para o funcionamento do programa, e deixe-os na mesma pasta (como no repositório).
+
+# Requisitos:
+- Python 3.12
+- yfinance
+- customtkinter
+
+# O que é o preço teto de uma ação?
+
+O Preço Teto é o valor máximo que um investidor está disposto a pagar por uma ação e faz parte de uma estratégia previdenciária que busca um retorno mínimo esperado de dividendos. Esse valor pode ser calculado de diferentes formas, dependendo do perfil do investidor. De maneira simples, utiliza-se os dividendos pagos por uma ação e o Dividend Yield desejado.
+
+Aqui, utilizamos o Método [Bazin](https://pt.wikipedia.org/wiki/D%C3%A9cio_Bazin) e consideramos a média de dividendos pagos durante 5 anos e um Dividend Yield esperado de 6%.
+
+
 	Preço Teto = (Média Dividendos) /  6%
-Uma vez estabelecido um Preço Teto, e se o preço de mercado da ação estiver maior que o Preço Teto, podemos considerar a ação sobrevalorizada e não recomendada para compra.
-E se o preço da ação estiver abaixo do Preço Teto, a ação está subvalorizada e é recomendada, segundo a estratégia.
-É importante não confundir o Preço Teto com o preço justo e preço alvo de uma ação,  pois o Preço Teto é apenas uma margem de segurança que o investidor pode utilizar para comprar uma ação por um valor aceitável, buscando não ultrapassar o teto.
-Não é apenas o indicador de Preço Teto que deve ser considerado na compra de uma ação, e ele pode não significar nada se utilizado de maneira inadequada. 
-É recomendável que investidor tome suas decisões com cautela e faça uma análise da saúde financeira da empresa e do modelo de negócio, levando em consideração o seus objetivos pessoais.
+ 
+Uma vez estabelecido um Preço Teto, se o preço de mercado da ação estiver acima do Preço Teto, podemos considerar a ação **sobrevalorizada** e não recomendada para compra. Se o preço da ação estiver abaixo do Preço Teto, a ação está **subvalorizada** e é recomendada, segundo a estratégia.
 
+É **importante** não confundir o Preço Teto com o _preço justo_ ou o _preço alvo_ de uma ação, pois o Preço Teto é apenas uma margem de segurança que o investidor pode utilizar para comprar uma ação por um valor aceitável, olhando apenas o potencial de remuneração da empresa. 
 
-Esse programa é um projeto em andamento e pode ser utilizado por investidores do Brasil. Por trás da interface gráfica existe um algoritmo que é simples e prático, foi escrito na linguagem de programação Python e, por enquanto, é dependente dos dados fornecidos por   
+E não é apenas o indicador de Preço Teto que deve ser considerado na compra de uma ação, e ele pode não significar nada se utilizado de maneira inadequada. É recomendável que o investidor tome suas decisões com cautela e faça uma análise da saúde financeira da empresa e do modelo de negócio, levando em consideração seus objetivos pessoais. 
 
-
+---
   
 	
