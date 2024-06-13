@@ -35,6 +35,7 @@ Você pode fazer o download das bibliotecas dentro do ambiente utilizando o arqu
 E claro! também é possível fazer a instalação utilizando o `pip install [biblioteca]`.
 
 ---
+
 ![Janela para consulta](print1.png)
 ![Janela com ativos da carteira](print2.png)
 
