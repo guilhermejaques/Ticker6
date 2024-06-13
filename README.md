@@ -56,6 +56,7 @@ Uma vez estabelecido um Preço Teto, se o preço de mercado da ação estiver ac
  	A alteração na cor ajuda apenas na visualização dos números em relação ao preço teto. Não representa uma recomendação de compra ou venda, muito menos a oscilação do ativo.
 
 
+
 É **importante** não confundir o Preço Teto com o _preço justo_ ou o _preço alvo_ de uma ação, pois o Preço Teto é apenas uma margem de segurança que o investidor pode utilizar para comprar uma ação por um valor aceitável, olhando apenas o potencial de remuneração da empresa. 
 
 E não é apenas o indicador de Preço Teto que deve ser considerado na compra de uma ação, e ele pode não significar nada se utilizado de maneira inadequada. É recomendável que o investidor tome suas decisões com cautela e faça uma análise da saúde financeira da empresa e do modelo de negócio, levando em consideração seus objetivos pessoais. 
