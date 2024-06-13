@@ -29,7 +29,7 @@ Faça o teste, contribua, aproveite!
 
 Você precisará do arquivo `main.py` que será executado, e do arquivo `validos.py` que é necessário para o funcionamento do programa. Apenas deixe-os na mesma pasta (como no repositório); por fim, será necessária a instalação das bibliotecas.
 
-Como em qualquer outro repositório, ao fazer o download ou clonagem, os arquivos já estarão na estrutura ideal para uso. Contanto que o usuário mantenha os arquivos citados acima no mesmo diretório, não haverá problemas para iniciar.
+Como em qualquer outro repositório, ao fazer o download ou clonagem, os arquivos já estarão na estrutura ideal para uso. E contanto que o usuário mantenha os arquivos citados acima no mesmo diretório, não haverá problemas para iniciar.
 
 # Requisitos
 
