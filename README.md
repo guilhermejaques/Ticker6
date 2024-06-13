@@ -5,7 +5,15 @@ Este programa é um projeto individual em andamento que pode ser utilizado por e
 
 Ticker6 é o nome do programa e, com ele, você poderá consultar a cotação atualizada das ações e vizualizar o preço teto sem a necessidade de calcular e buscar os dados pela internet. Também é possível armazenar os ativos favoritos em uma carteira. Por enquanto, o programa é dependente dos dados fornecidos pela biblioteca [yFinance](https://github.com/ranaroussi/yfinance) (Apache License). 
 
-Faça o teste e aproveite!
+Faça o teste, contribua, aproveite!
+
+---
+
+![Consulta](https://github.com/guilhermejaques/Ticker6/assets/159738624/03912c48-97eb-4532-874d-514901d43361)
+
+![Carteira](https://github.com/guilhermejaques/Ticker6/assets/159738624/528a56b1-a23a-4b98-a72b-34c9b5b748d9)
+
+---
 
 # O código
 
@@ -34,11 +42,6 @@ Você pode fazer o download das bibliotecas dentro do ambiente utilizando o arqu
 
 E claro! também é possível fazer a instalação utilizando o `pip install [biblioteca]`.
 
----
-
-![Janela para consulta](print1.png)
-![Janela com ativos da carteira](print2.png)
-
 # O que é o preço teto de uma ação?
 
 O Preço Teto é o valor máximo que um investidor está disposto a pagar por uma ação e faz parte de uma estratégia previdenciária que busca um retorno mínimo esperado de dividendos. Esse valor pode ser calculado de diferentes formas, dependendo do perfil do investidor. De maneira simples, utiliza-se os dividendos pagos por uma ação e o Dividend Yield desejado.
@@ -48,6 +51,10 @@ Aqui, utilizamos parte do Método [Bazin](https://pt.wikipedia.org/wiki/D%C3%A9c
 	Preço Teto = (Média Dividendos) /  6%
  
 Uma vez estabelecido um Preço Teto, se o preço de mercado da ação estiver acima do Preço Teto, podemos considerar a ação **sobrevalorizada** e não recomendada para compra. Se o preço da ação estiver abaixo do Preço Teto, a ação está **subvalorizada** e é recomendada, segundo a estratégia.
+
+	Durante a execução do programa, a cor do valor-cotação das ações é alterado: verde caso a cotação for menor que o preço teto | avermelhado caso a cotação ultrapasse o preço teto calculado.
+ 	A alteração na cor ajuda apenas na visualização dos números em relação ao preço teto. Não significa uma recomendação de compra ou venda, muito menos a oscilação do ativo.
+
 
 É **importante** não confundir o Preço Teto com o _preço justo_ ou o _preço alvo_ de uma ação, pois o Preço Teto é apenas uma margem de segurança que o investidor pode utilizar para comprar uma ação por um valor aceitável, olhando apenas o potencial de remuneração da empresa. 
 
