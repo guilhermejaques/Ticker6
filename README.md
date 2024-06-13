@@ -21,7 +21,7 @@ Faça o teste, contribua, aproveite!
   
 - Há duas variáveis importantes que estão destacadas no início do código e que podem ser alteradas, influenciando no cálculo do preço teto gerado pelo programa. Por padrão, elas são definidas como `dy = 0,06 (6%) | anos = 5`.
   
-- Sobre a modularização, o código principal executável é `main.py` e faz requisição a uma lista de ativos validos que está em `validos.py`.
+- Sobre a modularização, o código principal executável é `main.py` e faz requisição a uma lista de ativos válidos que está em `validos.py`.
   
 - O código faz a criação de um arquivo `.ativos.txt` onde estará registrado todos os ativos permanentes que o usuário definir dentro do programa. 
 
