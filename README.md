@@ -35,8 +35,8 @@ Você pode fazer o download das bibliotecas dentro do ambiente utilizando o arqu
 E claro! também é possível fazer a instalação utilizando o `pip install [biblioteca]`.
 
 ---
-[Janela para consulta](imagens/1.png)
-[Janela com ativos da carteira](imagens/2.png)
+[Janela para consulta](1.png)
+[Janela com ativos da carteira](2.png)
 
 # O que é o preço teto de uma ação?
 
