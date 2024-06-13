@@ -1,50 +1,48 @@
 
 # Sobre o projeto
 
-Este programa é um projeto individual e que está em andamento e pode ser utilizado por estudantes ou até mesmo por investidores. Por trás da interface gráfica [(customtkinter)](https://github.com/TomSchimansky/CustomTkinter) existe um algoritmo que é muito simples e prático, escrito na linguagem de programação Python. 
+Este programa é um projeto individual em andamento que pode ser utilizado por estudantes ou investidores. Por trás da interface gráfica [(CustomTkinter)](https://github.com/TomSchimansky/CustomTkinter) existe um algoritmo que é muito simples e prático, escrito na linguagem de programação Python. 
 
-Ticker6 é o nome do programa e, com ele, você poderá consultar a cotação das ações em tempo real e vizualizar o preço teto sem a necessidade de calcular e buscar os dados pela internet e também é possível armazenar os ativos favoritos em uma carteira. Por enquanto, o programa é dependente dos dados fornecidos pela biblioteca [yfinance](https://github.com/ranaroussi/yfinance) (Apache License). 
+Ticker6 é o nome do programa e, com ele, você poderá consultar a cotação atualizada das ações e vizualizar o preço teto sem a necessidade de calcular e buscar os dados pela internet. Também é possível armazenar os ativos favoritos em uma carteira. Por enquanto, o programa é dependente dos dados fornecidos pela biblioteca [yFinance](https://github.com/ranaroussi/yfinance) (Apache License). 
 
-Faça o teste você mesmo (a). Aproveite!
+Faça o teste e aproveite!
 
 # O código
 
 - O código foi escrito propositalmente em português (sem considerar as palavras reservadas em inglês da própria linguagem).
   
-- Há duas variáveis destacadas no início do código, elas são importantes e podem ser alteradas, influenciando no cálculo gerado pelo programa. Por padrão, elas são definidas como: `dy = 0,06 (6%) | anos = 5`
+- Há duas variáveis importantes que estão destacadas no início do código e que podem ser alteradas, influenciando no cálculo do preço teto gerado pelo programa. Por padrão, elas são definidas como `dy = 0,06 (6%) | anos = 5`.
   
-- O paradigma de orientação a objeto é utilizado, mesmo não sendo a melhor opção para simplificar casos específicos do código na condição atual - não sendo necessário em algumas partes - mas, é perfeito para a escalabilidade do código.
+- Sobre a modularização, o código principal executável é `main.py` e faz requisição a uma lista de ativos validos que está em `validos.py`.
   
-- Sobre a modularização, o código principal executável é `MAIN.py` e faz requisição a uma lista de de ativos validos que está em `VALIDOS.py`.
-  
-- O código faz a criação de um arquivo `ativos.txt` onde estará registrado todos os ativos permanentes que o usuário definir dentro do programa. 
+- O código faz a criação de um arquivo `.ativos.txt` onde estará registrado todos os ativos permanentes que o usuário definir dentro do programa. 
 
-# Como usar?
+# Como usar
 
-Resumindo, você precisará do arquivo `MAIN.py` que será executado e `VALIDOS.py` que é necessário para o funcionamento do programa, e deixe-os na mesma pasta (como no repositório);
-depois será necessário a instalação das bibliotecas.
+Você precisará do arquivo `main.py` que será executado, e do arquivo `validos.py` que é necessário para o funcionamento do programa. Apenas deixe-os na mesma pasta (como no repositório); por fim, será necessária a instalação das bibliotecas.
 
-Com tudo pronto, o programa estará livre para ser utilizado 
+Como em qualquer outro repositório, ao fazer o download ou clonagem, os arquivos já estarão na estrutura ideal para uso. Contanto que o usuário mantenha os arquivos citados acima no mesmo diretório, não haverá problemas para iniciar.
 
-# Requisitos:
+# Requisitos
+
 - Python 3.12
-- yfinance
-- customtkinter
+- yFinance 0.2.40
+- CustomTkinter 5.2.2
   
 ---
-Você pode fazer o download das bibliotecas dentro do ambiente utilizando o arquivo `requirements.txt` que está no repositório, e com o comando: `pip install -r requirements.txt` você fará a instalação das bibliotecas requisitadas diretamente do arquivo. 
+Você pode fazer o download das bibliotecas dentro do ambiente utilizando o arquivo `requirements.txt` que está no repositório, e com o comando `pip install -r requirements.txt` você fará a instalação das bibliotecas necessárias diretamente do arquivo. 
 
-Obviamente, também é possível fazer a instalação de cada uma das bibliotecas utilizando o PIP, visto que são apenas duas bibliotecas.
+E claro! também é possível fazer a instalação utilizando o `pip install [biblioteca]`.
 
-
-
+---
+[]()
+[]()
 
 # O que é o preço teto de uma ação?
 
-O Preço Teto é o valor máximo que um  mples, utiliza-se os dividendos pagos por uma ação e o Dividend Yield desejado.
+O Preço Teto é o valor máximo que um investidor está disposto a pagar por uma ação e faz parte de uma estratégia previdenciária que busca um retorno mínimo esperado de dividendos. Esse valor pode ser calculado de diferentes formas, dependendo do perfil do investidor. De maneira simples, utiliza-se os dividendos pagos por uma ação e o Dividend Yield desejado.
 
-Aqui, utilizamos o Método [Bazin](https://pt.wikipedia.org/wiki/D%C3%A9cio_Bazin) e consideramos a média de dividendos pagos durante 5 anos e um Dividend Yield esperado de 6%.
-
+Aqui, utilizamos parte do Método [Bazin](https://pt.wikipedia.org/wiki/D%C3%A9cio_Bazin) e consideramos a média de dividendos pagos durante 5 anos e um Dividend Yield esperado de 6%.
 
 	Preço Teto = (Média Dividendos) /  6%
  
