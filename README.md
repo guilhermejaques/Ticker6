@@ -1,5 +1,5 @@
 
-# Sobre o Projeto
+# Descrição 
 
 Este programa é um projeto individual em andamento que pode ser utilizado por estudantes ou investidores. Por trás da interface gráfica [(CustomTkinter)](https://github.com/TomSchimansky/CustomTkinter) existe um algoritmo que é muito simples e eficaz, escrito na linguagem de programação Python. 
 
@@ -13,11 +13,11 @@ Faça o teste, contribua e aproveite!
 ![Carteira](https://github.com/guilhermejaques/Ticker6/assets/159738624/528a56b1-a23a-4b98-a72b-34c9b5b748d9)
 
 
-# Executável Para Windows
+# Executável para windows
 [Clique Aqui](https://github.com/guilhermejaques/Ticker6/tree/main/dist) para ter acesso ao DOWNLOAD do arquivo executável.
 
 ---
-# O Código
+# O código
 
 - O código foi escrito propositalmente em português (sem considerar as palavras reservadas em inglês da própria linguagem).
   
@@ -28,7 +28,7 @@ Faça o teste, contribua e aproveite!
 - O código faz a criação de um arquivo `.ativos.txt` onde estará registrado todos os ativos permanentes que o usuário definir dentro do programa. 
 
 
-# Como Usar 
+# Como usar 
 
 Você precisará do arquivo `main.py` que será executado, e do arquivo `validos.py` que é necessário para o funcionamento do programa. Apenas deixe-os na mesma pasta (como no repositório); por fim, será necessário a instalação das bibliotecas.
 
@@ -48,7 +48,7 @@ Você pode fazer o download das bibliotecas dentro do ambiente desejado utilizan
 E claro! também é possível fazer a instalação utilizando o `pip install [biblioteca]`.
 
 
-# O Que é o Preço Teto De Uma Ação?
+# O que é o preço teto de uma ação?
 
 O Preço Teto é o valor máximo que um investidor está disposto a pagar por uma ação e faz parte de uma estratégia previdenciária que busca um retorno mínimo esperado de dividendos. Esse valor pode ser calculado de diferentes formas, dependendo do perfil do investidor. De maneira simples, utiliza-se os dividendos pagos por uma ação e o Dividend Yield desejado.
 
