@@ -38,7 +38,7 @@ Como em qualquer outro repositório, ao fazer o download ou clonagem, os arquivo
 
 # Requisitos
 
-- Python 3.11.9
+- Python 3.11 +
 - yFinance 0.2.40
 - CustomTkinter 5.2.2
 
