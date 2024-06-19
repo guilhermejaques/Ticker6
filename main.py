@@ -126,7 +126,10 @@ class Interface:
 
     def gerarInterface(self):
         self.atualizarInterface()
-        self.root.mainloop()
+        try:
+            self.root.mainloop()
+        except KeyboardInterrupt:
+            exit()
 
     def atualizarInterface(self):
         if len(carteira) > 0:
