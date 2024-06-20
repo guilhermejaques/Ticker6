@@ -43,9 +43,9 @@ Como em qualquer outro repositório, ao fazer o download ou clonagem, os arquivo
 - CustomTkinter 5.2.2
 
 ---
-Você pode fazer o download das bibliotecas dentro do ambiente desejado utilizando o arquivo `requirements.txt` que está no repositório, e com o comando `pip install -r requirements.txt` você fará a instalação das bibliotecas necessárias diretamente do arquivo. 
+Você pode fazer o download das bibliotecas dentro do ambiente desejado utilizando o arquivo `requirements.txt` que está no repositório, e com o comando `pip install -r requirements.txt` você fará a instalação das bibliotecas necessárias diretamente do arquivo.
 
-E claro! também é possível fazer a instalação utilizando o `pip install [biblioteca]`.
+E claro! também é possível fazer a instalação utilizando o `pip install` para cada uma das bibliotecas.
 
 
 # O que é o preço teto de uma ação?
