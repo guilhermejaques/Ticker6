@@ -30,7 +30,7 @@ Faça o teste, contribua e aproveite!
 
 # Como usar 
 
-Você precisará do arquivo `main.py` que será executado, e do arquivo `validos.py` que é necessário para o funcionamento do programa. Apenas deixe-os na mesma pasta (como no repositório); por fim, será necessário a instalação das bibliotecas.
+Além da instalação do Python, você precisará do arquivo `main.py` que será executado, e do arquivo `validos.py` que é necessário para o funcionamento do programa. Apenas deixe-os na mesma pasta (como no repositório); por fim, será necessário a instalação das bibliotecas.
 
 Como em qualquer outro repositório, ao fazer o download ou clonagem, os arquivos já estarão na estrutura ideal para uso. E contanto que o usuário mantenha os arquivos citados acima no mesmo diretório, não haverá problemas para iniciar.
 
@@ -38,7 +38,7 @@ Como em qualquer outro repositório, ao fazer o download ou clonagem, os arquivo
 
 # Requisitos
 
-- Python 3.11 +
+- Python 3.8 +
 - yFinance 0.2.40
 - CustomTkinter 5.2.2
 
