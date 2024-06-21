@@ -9,8 +9,6 @@ pyc
 
 # Distribution / packaging
 .Python
-dist/
-*.exe
 build/
 develop-eggs/
 downloads/
