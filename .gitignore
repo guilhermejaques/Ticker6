@@ -10,7 +10,7 @@ pyc
 # Distribution / packaging
 .Python
 dist/
-dist/*
+*.exe
 build/
 develop-eggs/
 downloads/
