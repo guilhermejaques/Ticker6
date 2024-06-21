@@ -30,7 +30,7 @@ Faça o teste, contribua e aproveite!
 
 # Como usar 
 
-Você precisará do arquivo `main.py` que será executado, e do arquivo `validos.py` que é necessário para o funcionamento do programa. Apenas deixe-os na mesma pasta (como no repositório); por fim, será necessário a instalação das bibliotecas.
+Além da instalação do Python, você precisará do arquivo `main.py` que será executado, e do arquivo `validos.py` que é necessário para o funcionamento do programa. Apenas deixe-os na mesma pasta (como no repositório); por fim, será necessário a instalação das bibliotecas.
 
 Como em qualquer outro repositório, ao fazer o download ou clonagem, os arquivos já estarão na estrutura ideal para uso. E contanto que o usuário mantenha os arquivos citados acima no mesmo diretório, não haverá problemas para iniciar.
 
@@ -38,14 +38,14 @@ Como em qualquer outro repositório, ao fazer o download ou clonagem, os arquivo
 
 # Requisitos
 
-- Python 3.11.9
+- Python 3.8 +
 - yFinance 0.2.40
 - CustomTkinter 5.2.2
 
 ---
-Você pode fazer o download das bibliotecas dentro do ambiente desejado utilizando o arquivo `requirements.txt` que está no repositório, e com o comando `pip install -r requirements.txt` você fará a instalação das bibliotecas necessárias diretamente do arquivo. 
+Você pode fazer o download das bibliotecas dentro do ambiente desejado utilizando o arquivo `requirements.txt` que está no repositório, e com o comando `pip install -r requirements.txt` você fará a instalação das bibliotecas necessárias diretamente do arquivo.
 
-E claro! também é possível fazer a instalação utilizando o `pip install [biblioteca]`.
+E claro! também é possível fazer a instalação utilizando o `pip install` para cada uma das bibliotecas.
 
 
 # O que é o preço teto de uma ação?
@@ -59,7 +59,7 @@ Aqui, utilizamos parte do Método [Bazin](https://pt.wikipedia.org/wiki/D%C3%A9c
 Uma vez estabelecido um Preço Teto, se o preço de mercado da ação estiver acima do Preço Teto, podemos considerar a ação **sobrevalorizada** e não recomendada para compra. Se o preço da ação estiver abaixo do Preço Teto, a ação está **subvalorizada** e é recomendada, segundo a estratégia.
 
 	Durante a execução do programa, a cor do valor-cotação das ações é alterado: VERDE caso a cotação for menor ou igual ao preço teto | AVERMELHADO caso a cotação ultrapasse o preço teto calculado.
- 	A alteração na cor ajuda apenas na visualização dos números em relação ao preço teto. Não representa uma recomendação de compra ou venda, muito menos a oscilação do ativo.
+ 	! A alteração na cor ajuda apenas na visualização dos números em relação ao preço teto. Não representa uma recomendação de compra ou venda, muito menos a oscilação do ativo na bolsa de valores.
 
 
 
