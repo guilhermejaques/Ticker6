@@ -16,7 +16,7 @@ Faça o teste, contribua e aproveite!
 
 
 # Executável para windows
-[Clique Aqui](https://github.com/guilhermejaques/Ticker6/tree/main/dist) para ter acesso ao DOWNLOAD do arquivo executável.
+[Clique Aqui](https://github.com/guilhermejaques/Ticker6/releases/tag/v0.1.0) para ter acesso ao DOWNLOAD do arquivo executável.
 
 ---
 # O código
