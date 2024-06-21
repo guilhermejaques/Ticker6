@@ -1,7 +1,7 @@
 
 # Descrição 
 
-Este programa é um projeto individual em andamento que pode ser utilizado por estudantes ou investidores. Por trás da interface gráfica [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) existe um algoritmo que é muito simples e eficaz, escrito na linguagem de programação Python. 
+Esta automação é um projeto individual em andamento e que pode ser utilizada por estudantes ou investidores. Por trás da interface gráfica [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) existe um algoritmo que é muito simples e eficaz, escrito na linguagem de programação Python. 
 
 Ticker6 é o nome do programa e, com ele, você poderá consultar a cotação atualizada das ações e vizualizar o preço teto sem a necessidade de calcular e buscar os dados em sites. Também é possível armazenar os ativos favoritos em uma carteira. 
 
@@ -10,13 +10,13 @@ O programa depende dos dados fornecidos pela biblioteca [yFinance](https://githu
 Faça o teste, contribua e aproveite!
 
 ---
-![Consulta](https://github.com/guilhermejaques/Ticker6/assets/159738624/03912c48-97eb-4532-874d-514901d43361)
+![Janela Consulta - Ticker6](https://github.com/guilhermejaques/Ticker6/assets/159738624/03912c48-97eb-4532-874d-514901d43361)
 
-![Carteira](https://github.com/guilhermejaques/Ticker6/assets/159738624/528a56b1-a23a-4b98-a72b-34c9b5b748d9)
+![Janela Carteira - Ticker6](https://github.com/guilhermejaques/Ticker6/assets/159738624/528a56b1-a23a-4b98-a72b-34c9b5b748d9)
 
 
 # Executável para windows
-[Clique Aqui](https://github.com/guilhermejaques/Ticker6/tree/main/dist) para ter acesso ao DOWNLOAD do arquivo executável.
+[Clique Aqui](https://github.com/guilhermejaques/Ticker6/releases/tag/v0.1.0) para ter acesso ao DOWNLOAD do arquivo executável.
 
 ---
 # O código
@@ -67,7 +67,7 @@ Uma vez estabelecido um Preço Teto, se o preço de mercado da ação estiver ac
 
 É **importante** não confundir o Preço Teto com o _preço justo_ ou o _preço alvo_ de uma ação, pois o Preço Teto é apenas uma margem de segurança que o investidor pode utilizar para comprar uma ação por um valor aceitável, olhando apenas o potencial de remuneração da empresa. 
 
-E não é apenas o indicador de Preço Teto que deve ser considerado na compra de uma ação, e ele pode não significar nada se utilizado de maneira inadequada. É recomendável que o investidor tome suas decisões com cautela e faça uma análise da saúde financeira da empresa e do modelo de negócio, levando em consideração seus objetivos pessoais. 
+E não é apenas o Preço Teto que deve ser considerado na compra de uma ação, e ele pode não significar nada se utilizado de maneira inadequada. É recomendável que o investidor tome suas decisões com cautela e faça uma análise da saúde financeira da empresa e do modelo de negócio, levando em consideração seus objetivos pessoais. 
 
 ---
   
