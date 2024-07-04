@@ -2,7 +2,7 @@ from validos import ativos_validos
 import yfinance
 import customtkinter
 
-# v0.1.0
+# v0.1.1
 
 # dividend yield (%) - retorno esperado:
 dy = 0.06 #6%
@@ -70,18 +70,19 @@ class Interface:
     def criarDimensao(self):
         self.root = customtkinter.CTk()
 
-        self.root.title('Ticker6 -- v0.1.0')
+        self.root.title('Ticker6 -- v0.1.1')
         self.root.geometry('700x400+150+150')
-        self.root._set_appearance_mode('Dark')
+        self.root._set_appearance_mode('dark')
         self.root.resizable(width=False, height=False)
 
     def criarJanela(self, j1='Carteira', j2='Consulta', j3='...'):
         self.j1, self.j2, self.j3 = j1, j2, j3
 
         self.janela = customtkinter.CTkTabview(self.root, width=670, height=370, corner_radius=5, fg_color='gray17',
-            segmented_button_fg_color='gray17', segmented_button_selected_color='gray17',
-                segmented_button_unselected_color='gray25', segmented_button_selected_hover_color='gray17',
-                    segmented_button_unselected_hover_color='gray23', border_width=1)
+            segmented_button_fg_color='gray17', segmented_button_selected_color='gray17', bg_color='gray14',
+                segmented_button_unselected_color='gray20', segmented_button_selected_hover_color='gray17',
+                    segmented_button_unselected_hover_color='gray23', border_width=1, border_color='gray')
+
         self.janela.pack()
         self.janela.add(f'{j1}')
         self.janela.add(f'{j2}')
@@ -92,6 +93,7 @@ class Interface:
     def criarTitulo(self):
         titulo = customtkinter.CTkLabel(self.janela.tab(self.j1), text='Carteira', font=("arial bold", 16),
             text_color='gray')
+
         titulo.place(x=20, y=20)
 
         customtkinter.CTkLabel(self.janela.tab(self.j2), text='Consulta', font=("arial bold", 16),
@@ -101,25 +103,31 @@ class Interface:
 
     def criarEntrada(self):
         entrada = customtkinter.CTkEntry(self.janela.tab(f'{self.j2}'),
-            width=100, placeholder_text=' ...')
+            width=100, placeholder_text=' ...', placeholder_text_color='white', fg_color='gray10', text_color='white',
+                font=("Calibri", 14), border_color='gray', border_width=2)
+
         entrada.place(x=90, y=20)
 
         return entrada
 
     def criarBotao(self):
         customtkinter.CTkButton(self.janela.tab(f'{self.j2}'), text='>', width=1, command=InterfaceConsulta,
-            corner_radius=10, text_color='light blue',
-              fg_color='gray28', hover_color='dark sea green').place(x=195, y=20)
+            corner_radius=10, text_color='light blue', fg_color='gray28', hover_color='dark sea green',
+                anchor='center', border_color='gray', border_width=2).place(x=195, y=20)
 
         botao_adicionar = customtkinter.CTkButton(self.janela.tab(f'{self.j2}'), text='+', width=1, corner_radius=10,
-           text_color='gray17', fg_color='gray28', hover_color='red')
+            text_color='gray17', fg_color='gray28', hover_color='red', anchor='center',
+                border_color='gray25', border_width=2)
+
         botao_adicionar.place(x=230, y=20)
 
         return botao_adicionar
 
     def criarBotaoRe(self):
         botao_remover = customtkinter.CTkButton(self.janela.tab('Consulta'), text='Remover da Carteira', width=1,
-           corner_radius=10, text_color='white', fg_color='gray28', hover_color='dark sea green')
+            corner_radius=10, text_color='white', fg_color='gray28', hover_color='dark sea green',
+                anchor='center', border_color='gray25', border_width=2)
+
         botao_remover.place(x=270, y=20)
 
         return botao_remover
