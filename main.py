@@ -255,7 +255,7 @@ class InterfaceConsulta:
 
             l3 = customtkinter.CTkLabel(janela.tab('Consulta'), text='{}\n{}\n\n{}'
                 .format(info[2], '> Preço Teto (Bazin)', '> Cotação'), font=("Consolas", 13),
-                    text_color='light green', fg_color='transparent', corner_radius=5)
+                    text_color='light green', fg_color='transparent', corner_radius=5, justify='left')
             l3.place(x=140, y=80)
 
             consulta_corrente = [[info[3], l1, l0, l3]]
