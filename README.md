@@ -16,6 +16,11 @@ Faça o teste, contribua e aproveite!
 
 
 # Executável para windows
+
+IMPORTANTE:
+
+**Poderá acontecer um falso alerta do antivírus Microsoft Defender no processo de download e inicialização do programa. E se você não estiver confortável com esses avisos inconvenientes, é aconselhável que não instale o executável em sua máquina até que o problema seja resolvido**
+
 [Clique Aqui](https://github.com/guilhermejaques/Ticker6/releases/tag/v0.1.1) para ter acesso ao DOWNLOAD do arquivo executável.
 
 ---
