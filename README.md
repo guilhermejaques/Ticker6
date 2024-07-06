@@ -15,9 +15,6 @@ Faça o teste, contribua e aproveite!
 
 ![Janela Carteira - Ticker6](img/screenshot1.png)
 
-<img src="img/screenshot2.png">
-# Executável para windows
-
 IMPORTANTE:
 
 **Poderá acontecer um falso alerta do antivírus Microsoft Defender no processo de download e inicialização do programa. E se você não estiver confortável com esses avisos inconvenientes, é aconselhável que não instale o executável em sua máquina até que o problema seja resolvido.**
