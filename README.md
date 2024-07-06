@@ -11,9 +11,9 @@ Faça o teste, contribua e aproveite!
 
 ---
 
-![Janela Consulta - Ticker6](img/screenshot2.png)
+![screenshot2](https://github.com/guilhermejaques/Ticker6/assets/159738624/4ac6a284-5cd0-41b7-8774-40cfb1579e9b)
+![screenshot1](https://github.com/guilhermejaques/Ticker6/assets/159738624/90c162ee-f7a2-4840-9992-dc30cc5c6614)
 
-![Janela Carteira - Ticker6](img/screenshot1.png)
 
 IMPORTANTE:
 
