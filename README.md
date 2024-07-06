@@ -15,7 +15,7 @@ Faça o teste, contribua e aproveite!
 
 ![Janela Carteira - Ticker6](img/screenshot1.png)
 
-
+<img src="img/screenshot2.png">
 # Executável para windows
 
 IMPORTANTE:
