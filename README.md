@@ -26,7 +26,7 @@ Faça o teste, contribua e aproveite!
 - O código faz a criação de um arquivo `.ativos.txt` onde estará registrado todos os ativos permanentes que o usuário definir dentro do programa. 
 
 
-# Como instalar 
+# Como rodar
 
 Além da instalação do Python, você precisará do arquivo `main.py` que será executado, e do arquivo `validos.py` que é necessário para o funcionamento do programa. Apenas deixe-os na mesma pasta (como no repositório); por fim, será necessário a instalação das bibliotecas.
 
