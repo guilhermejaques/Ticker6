@@ -27,7 +27,7 @@ Faça o teste, contribua e aproveite!
 
 # Requisitos
 
-- Python 3.8 +
+- Python 3.8 (ou superior) com PIP
   
   **Bibliotecas:**
 - yFinance 0.2.40
@@ -36,14 +36,14 @@ Faça o teste, contribua e aproveite!
 
 # Como usar
 
-Além da instalação do Python, você precisará do arquivo `main.py` que será executado, e do arquivo `validos.py` que é necessário para o funcionamento do programa. Apenas deixe-os na mesma pasta (como no repositório); por fim, será necessário a instalação das bibliotecas.
+Além da instalação do [Python](https://www.python.org/downloads/), você precisará do arquivo `main.py` que será executado, e do arquivo `validos.py` que é necessário para o funcionamento do programa. Apenas deixe-os na mesma pasta (como no repositório); por fim, será necessário a instalação das bibliotecas.
 
 Como em qualquer outro repositório, ao fazer o download ou clonagem, os arquivos já estarão na estrutura ideal para uso. E contanto que o usuário mantenha os arquivos citados acima no mesmo diretório, não haverá problemas para iniciar.
 
 ---
-Você pode fazer o download das bibliotecas através de um terminal utilizando o arquivo `requirements.txt` que está no repositório, e com o comando `pip install -r requirements.txt` você fará a instalação das bibliotecas necessárias diretamente do arquivo.
+Você pode fazer o download das bibliotecas através de um terminal utilizando o arquivo `requirements.txt` que está no repositório, e com o comando `pip install -r requirements.txt` você fará a instalação das bibliotecas necessárias diretamente do arquivo. 
 
-E claro! também é possível fazer a instalação utilizando o `pip install` para cada uma das bibliotecas.
+E claro! também é possível fazer a instalação utilizando o `pip install` para cada uma das bibliotecas. 
 
 
 # O que é o preço teto de uma ação?
