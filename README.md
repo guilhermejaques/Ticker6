@@ -10,16 +10,9 @@ O programa depende dos dados fornecidos pela biblioteca [yFinance](https://githu
 Faça o teste, contribua e aproveite!
 
 ---
+![Janela Consulta](https://github.com/guilhermejaques/Ticker6/assets/159738624/4ac6a284-5cd0-41b7-8774-40cfb1579e9b)
 
-![screenshot2](https://github.com/guilhermejaques/Ticker6/assets/159738624/4ac6a284-5cd0-41b7-8774-40cfb1579e9b)
-![screenshot1](https://github.com/guilhermejaques/Ticker6/assets/159738624/90c162ee-f7a2-4840-9992-dc30cc5c6614)
-
-
-IMPORTANTE:
-
-**Poderá acontecer um falso alerta do antivírus Microsoft Defender no processo de download e inicialização do programa. E se você não estiver confortável com esses avisos inconvenientes, é aconselhável que não instale o executável em sua máquina até que o problema seja resolvido.**
-
-[Clique Aqui](https://github.com/guilhermejaques/Ticker6/releases/tag/v0.1.1) para ter acesso ao DOWNLOAD do arquivo executável.
+![Janela Carteira](https://github.com/guilhermejaques/Ticker6/assets/159738624/90c162ee-f7a2-4840-9992-dc30cc5c6614)
 
 ---
 # O código
