@@ -34,7 +34,7 @@ Faça o teste, contribua e aproveite!
 - CustomTkinter 5.2.2
 
 
-# Como usar
+# Como usar / Instalar
 
 Além da instalação do [Python](https://www.python.org/downloads/), você precisará do arquivo `main.py` que será executado, e do arquivo `validos.py` que é necessário para o funcionamento do programa. Apenas deixe-os na mesma pasta (como no repositório); por fim, será necessário a instalação das bibliotecas.
 
