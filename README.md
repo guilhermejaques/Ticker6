@@ -46,7 +46,7 @@ Você pode fazer o download das bibliotecas através de um terminal utilizando o
 E claro! também é possível fazer a instalação utilizando o `pip install` para cada uma das bibliotecas. 
 
 # Executável para windows
-Você pode fazer o [download](https://github.com/guilhermejaques/Ticker6/releases/tag/EXE) do executável! 
+Você pode fazer o [download](https://github.com/guilhermejaques/Ticker6/releases/tag/EXE) do executável... 
 
 # O que é o preço teto de uma ação?
 
