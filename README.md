@@ -23,7 +23,7 @@ Faça o teste, contribua e aproveite!
   
 - Sobre a modularização, o código principal executável é `main.pyw` e faz requisição a uma lista de ativos válidos que está em `validos.py`.
   
-- O código faz a criação de um arquivo `.ativos.txt` onde estará registrado todos os ativos permanentes que o usuário definir dentro do programa. 
+- O código faz a criação de um arquivo `.ativos.txt` onde estará registrado todos os ativos permanentes que o usuário definir dentro do programa. O arquivo de texto simples facilita a manutenção dos ativos na carteira para qualquer tipo de usuário.   
 
 # Requisitos
 
