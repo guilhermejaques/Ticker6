@@ -21,9 +21,9 @@ Faça o teste, contribua e aproveite!
   
 - Há duas variáveis importantes que estão destacadas no início do código e que podem ser alteradas, influenciando no cálculo do preço teto gerado pelo programa. Por padrão, elas são definidas como `dy = 0,06 (6%) | anos = 5`.
   
-- Sobre a modularização, o código principal executável é `main.py` e faz requisição a uma lista de ativos válidos que está em `validos.py`.
+- Sobre a modularização, o código principal executável é `main.pyw` e faz requisição a uma lista de ativos válidos que está em `validos.py`.
   
-- O código faz a criação de um arquivo `.ativos.txt` onde estará registrado todos os ativos permanentes que o usuário definir dentro do programa. 
+- O código faz a criação de um arquivo `.ativos.txt` onde estará registrado todos os ativos permanentes que o usuário definir dentro do programa. O arquivo de texto simples facilita a manutenção dos ativos na carteira para qualquer tipo de usuário.   
 
 # Requisitos
 
@@ -36,7 +36,7 @@ Faça o teste, contribua e aproveite!
 
 # Como usar / Instalar
 
-Além da instalação do [Python](https://www.python.org/downloads/), você precisará do arquivo `main.py` que será executado, e do arquivo `validos.py` que é necessário para o funcionamento do programa. Apenas deixe-os na mesma pasta (como no repositório); por fim, será necessário a instalação das bibliotecas.
+Além da instalação do [Python](https://www.python.org/downloads/), você precisará do arquivo `main.pyw` que será executado, e do arquivo `validos.py` que é necessário para o funcionamento do programa. Apenas deixe-os na mesma pasta (como no repositório); por fim, será necessário a instalação das bibliotecas.
 
 Como em qualquer outro repositório, ao fazer o download ou clonagem, os arquivos já estarão na estrutura ideal para uso. E contanto que o usuário mantenha os arquivos citados acima no mesmo diretório, não haverá problemas para iniciar.
 
@@ -45,6 +45,8 @@ Você pode fazer o download das bibliotecas através de um terminal utilizando o
 
 E claro! também é possível fazer a instalação utilizando o `pip install` para cada uma das bibliotecas. 
 
+# Executável para windows
+Você pode fazer o [download](https://github.com/guilhermejaques/Ticker6/releases/tag/EXE) do executável... 
 
 # O que é o preço teto de uma ação?
 
