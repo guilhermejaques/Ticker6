@@ -2,7 +2,7 @@ from validos import ativos_validos
 import yfinance
 import customtkinter
 
-# v0.1.1
+# v0.1.3
 
 # dividend yield (%) - retorno esperado:
 dy = 0.06 #6%
@@ -174,54 +174,39 @@ class InterfaceCarteira:
 
         titulo_j1.configure(text=f'Carteira ({len(lista)})')
 
-        x = 20
+        x = 20  # posição X inicia em 20
         if len(lista) <= 4:
 
             for ticker in lista:
                 info = Ativo(ticker).retorno()
 
-                l1 = customtkinter.CTkButton(janela.tab('Carteira'), text=status(1, info, ticker),
-                    font=("Consolas", 14), text_color='white', fg_color='gray26', corner_radius=7, width=30,
-                        anchor='w', height=10)
+                l1, l0 = criarRotulo(info, ticker)
                 l1.place(x=x, y=80)
-
-                l0 = customtkinter.CTkLabel(janela.tab('Carteira'), text=status(0, info), font=("Consolas", 14),
-                    text_color=statusCor(info), fg_color='transparent', corner_radius=7, width=110, anchor='w')
                 l0.place(x=x-2, y=125)
 
                 carteira_corrente.append([ticker, l1, l0])
                 x = x + 170
 
         elif len(lista) in [5, 6, 7, 8]:
-            x = 20
+            x = 20  # posição X inicia em 20
 
             for ticker in lista[:4]:
                 info = Ativo(ticker).retorno()
 
-                l1 = customtkinter.CTkButton(janela.tab('Carteira'), text=status(1, info, ticker),
-                        font=("Consolas", 14), text_color='white', fg_color='gray26', corner_radius=7, width=30,
-                            anchor='w', height=10)
+                l1, l0 = criarRotulo(info, ticker)
                 l1.place(x=x, y=80)
-
-                l0 = customtkinter.CTkLabel(janela.tab('Carteira'), text=status(0, info), font=("Consolas", 14),
-                        text_color=statusCor(info), fg_color='transparent', corner_radius=7, width=110, anchor='w')
                 l0.place(x=x-2, y=125)
 
                 carteira_corrente.append([ticker, l1, l0])
                 x = x + 170
 
-            x = 20
+            x = 20  # posição X retorna para 20
             for ticker in lista[4:]:
 
                 info = Ativo(ticker).retorno()
 
-                l1 = customtkinter.CTkButton(janela.tab('Carteira'), text=status(1, info, ticker),
-                        font=("Consolas", 14), text_color='white', fg_color='gray26', corner_radius=7, width=30,
-                            anchor='w', height=10)
+                l1, l0 = criarRotulo(info, ticker)
                 l1.place(x=x, y=200)
-
-                l0 = customtkinter.CTkLabel(janela.tab('Carteira'), text=status(0, info), font=("Consolas", 14),
-                        text_color=statusCor(info), fg_color='transparent', corner_radius=7, width=110, anchor='w')
                 l0.place(x=x-2, y=245)
 
                 carteira_corrente.append([ticker, l1, l0])
@@ -248,12 +233,8 @@ class InterfaceConsulta:
 
             info = Ativo(entrada.get()).retorno('Consulta')
 
-            l1 = customtkinter.CTkButton(janela.tab('Consulta'), text=status(1, info, info[3]), font=("Consolas", 14),
-                text_color='white', fg_color='gray26', corner_radius=7, width=30, anchor='w', height=10)
+            l1, l0 = criarRotulo(info, ticker=info[3], local='Consulta')
             l1.place(x=20, y=80)
-
-            l0 = customtkinter.CTkLabel(janela.tab('Consulta'), text=status(0, info), font=("Consolas", 14),
-                text_color=statusCor(info), fg_color='transparent', corner_radius=7, width=110, anchor='w')
             l0.place(x=18, y=125)
 
             l3 = customtkinter.CTkLabel(janela.tab('Consulta'), text='{}\n{}\n\n{}'
@@ -426,6 +407,17 @@ def apagarBotaoRe():
     except NameError:
         pass
 
+def criarRotulo(info, ticker, local='Carteira'):
+    l1 = customtkinter.CTkButton(janela.tab(local), text=status(1, info, ticker),
+                                 font=("Consolas", 14), text_color='white', fg_color='gray26', corner_radius=7,
+                                 width=30,
+                                 anchor='w', height=10)
+
+    l0 = customtkinter.CTkLabel(janela.tab(local), text=status(0, info), font=("Consolas", 14),
+                                text_color=statusCor(info), fg_color='transparent', corner_radius=7, width=110,
+                                anchor='w')
+
+    return l1, l0
 
 if __name__ == '__main__':
 
