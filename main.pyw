@@ -2,7 +2,7 @@ from validos import ativos_validos
 import yfinance
 import customtkinter
 
-# v0.1.1
+# v0.1.2
 
 # dividend yield (%) - retorno esperado:
 dy = 0.06 #6%
