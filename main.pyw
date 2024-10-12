@@ -1,8 +1,10 @@
 from validos import ativos_validos
 import yfinance
 import customtkinter
+import csv
+from random import randint
 
-# v0.1.3
+# v0.1.4
 
 # dividend yield (%) - retorno esperado:
 dy = 0.06 #6%
@@ -70,7 +72,7 @@ class Interface:
     def criarDimensao(self):
         self.root = customtkinter.CTk()
 
-        self.root.title('Ticker6 -- v0.1.3')
+        self.root.title('Ticker6 -- v0.1.4')
         self.root.geometry('700x400+150+150')
         self.root._set_appearance_mode('dark')
         self.root.resizable(width=False, height=False)
@@ -217,7 +219,13 @@ class InterfaceCarteira:
             InterfaceCarteira(carteira)
 
         if len(lista) == 0:
-            msg = aviso('Voçê pode adicionar até 8 ativos à carteira...', 'Carteira')
+            aleatorio = randint(1,3)
+            if aleatorio == 1:
+                msg = aviso('Voçê pode adicionar até 8 ativos à carteira...', 'Carteira')
+            if aleatorio == 2:
+                msg = aviso('Faça uma consulta e adicione seus ativos favoritos à carteira...', 'Carteira')
+            if aleatorio == 3:
+                msg = aviso('', 'Carteira')
         else:
             apagarMsg()
 
@@ -268,11 +276,13 @@ class InterfaceConsulta:
             if len(consulta_corrente) == 0:
                 botao_adicionar.configure(hover_color='red', command=None)
 
+
     def adicionarAtivo(self):
-        Arquivo().escrever()
-        self.atualizarRotulo()
-        self.atualizarRotulo('Consulta')
-        self.alterarBotoes()
+        if len(carteira_corrente) < 8:
+            Arquivo().escrever()
+            self.atualizarRotulo()
+            self.atualizarRotulo('Consulta')
+            self.alterarBotoes()
 
     def atualizarRotulo(self, janela_nome='Carteira'):
         global carteira, carteira_corrente, consulta_corrente
@@ -307,20 +317,16 @@ class InterfaceConsulta:
 
 class Arquivo:
 
-    def ler(self, nome_arquivo='.ativos.txt'):
+    def ler(self, nome_arquivo='.ativos.csv'):
         lista = []
-
         try:
-            with open(f'{nome_arquivo}', 'r', encoding='UTF-8') as self.arquivo:
-                conteudo = self.arquivo.readlines()
+            with open(f'{nome_arquivo}', 'r', newline='', encoding='UTF-8') as self.arquivo:
+                conteudo = csv.reader(self.arquivo)
+                lista = [ticker.upper() for linha in conteudo for ticker in linha]
             self.fechar()
 
-            for ticker in conteudo:
-                ticker = ticker[:-2]
-                lista.append(ticker.upper())
-
         except FileNotFoundError:
-            if nome_arquivo == '.ativos.txt':
+            if nome_arquivo == '.ativos.csv':
                 self.criar()
             else:
                 pass
@@ -328,19 +334,21 @@ class Arquivo:
             return lista
 
     def escrever(self):
-        with open('.ativos.txt', 'a', encoding='UTF-8') as self.arquivo:
+        with open('.ativos.csv', 'a', newline='', encoding='UTF-8') as self.arquivo:
             ticker = consulta_corrente[0][0]
-            self.arquivo.write(f'{ticker},\n')
+            escritor = csv.writer(self.arquivo)
+            escritor.writerow([ticker])
         self.fechar()
 
     def reescrever(self, conteudo):
-        with open('.ativos.txt', 'w+', encoding='UTF-8') as self.arquivo:
+        with open('.ativos.csv', 'w+', newline='', encoding='UTF-8') as self.arquivo:
+            escritor = csv.writer(self.arquivo)
             for ticker in conteudo:
-                self.arquivo.write(f'{ticker},\n')
+                escritor.writerow([ticker])
         self.fechar()
 
     def criar(self):
-        with open('.ativos.txt', 'x', encoding='UTF-8') as self.arquivo:
+        with open('.ativos.csv', 'x', encoding='UTF-8') as self.arquivo:
             pass
         self.fechar()
 
