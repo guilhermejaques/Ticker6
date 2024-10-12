@@ -70,7 +70,7 @@ class Interface:
     def criarDimensao(self):
         self.root = customtkinter.CTk()
 
-        self.root.title('Ticker6 -- v0.1.1')
+        self.root.title('Ticker6 -- v0.1.3')
         self.root.geometry('700x400+150+150')
         self.root._set_appearance_mode('dark')
         self.root.resizable(width=False, height=False)
