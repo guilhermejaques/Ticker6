@@ -32,6 +32,7 @@ Faça o teste, contribua e aproveite!
   **Bibliotecas:**
 - yFinance 0.2.40
 - CustomTkinter 5.2.2
+- Pillow 10.4.0 (Necessária a partir da versão 0.2.0 do TICKER6)
 
 
 # Como usar / Instalar
