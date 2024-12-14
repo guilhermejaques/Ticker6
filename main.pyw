@@ -3,8 +3,12 @@ import yfinance
 import customtkinter
 import csv
 from random import randint
+from PIL import Image
+import os
 
-# v0.1.4
+# versão
+vers = 'v0.2.0'
+
 
 # dividend yield (%) - retorno esperado:
 dy = 0.06 #6%
@@ -70,9 +74,7 @@ class Interface:
         self.root = customtkinter.CTk()
 
     def criarDimensao(self):
-        self.root = customtkinter.CTk()
-
-        self.root.title('Ticker6 -- v0.1.4')
+        self.root.title(f'Ticker6 -- {vers}')
         self.root.geometry('700x400+150+150')
         self.root._set_appearance_mode('dark')
         self.root.resizable(width=False, height=False)
@@ -135,7 +137,7 @@ class Interface:
         return botao_remover
 
     def gerarInterface(self):
-        self.atualizarInterface()
+        #self.atualizarInterface()
         try:
             self.root.mainloop()
         except KeyboardInterrupt:
@@ -182,11 +184,12 @@ class InterfaceCarteira:
             for ticker in lista:
                 info = Ativo(ticker).retorno()
 
-                l1, l0 = criarRotulo(info, ticker)
+                l1, l0, rotulo_img = criarRotulo(info, ticker)
                 l1.place(x=x, y=80)
                 l0.place(x=x-2, y=125)
+                rotulo_img.place(x=x+80, y=79)
 
-                carteira_corrente.append([ticker, l1, l0])
+                carteira_corrente.append([ticker, l1, l0, rotulo_img])
                 x = x + 170
 
         elif len(lista) in [5, 6, 7, 8]:
@@ -195,11 +198,12 @@ class InterfaceCarteira:
             for ticker in lista[:4]:
                 info = Ativo(ticker).retorno()
 
-                l1, l0 = criarRotulo(info, ticker)
+                l1, l0, rotulo_img = criarRotulo(info, ticker)
                 l1.place(x=x, y=80)
                 l0.place(x=x-2, y=125)
+                rotulo_img.place(x=x+80, y=79)
 
-                carteira_corrente.append([ticker, l1, l0])
+                carteira_corrente.append([ticker, l1, l0, rotulo_img])
                 x = x + 170
 
             x = 20  # posição X retorna para 20
@@ -207,11 +211,12 @@ class InterfaceCarteira:
 
                 info = Ativo(ticker).retorno()
 
-                l1, l0 = criarRotulo(info, ticker)
+                l1, l0, rotulo_img = criarRotulo(info, ticker)
                 l1.place(x=x, y=200)
                 l0.place(x=x-2, y=245)
+                rotulo_img.place(x=x+80, y=199)
 
-                carteira_corrente.append([ticker, l1, l0])
+                carteira_corrente.append([ticker, l1, l0, rotulo_img])
                 x = x + 170
         else:
             carteira = lista[:8]
@@ -241,16 +246,17 @@ class InterfaceConsulta:
 
             info = Ativo(entrada.get()).retorno('Consulta')
 
-            l1, l0 = criarRotulo(info, ticker=info[3], local='Consulta')
+            l1, l0, rotulo_img = criarRotulo(info, ticker=info[3], local='Consulta')
             l1.place(x=20, y=80)
             l0.place(x=18, y=125)
+            rotulo_img.place(x=20+80, y=79)
 
             l3 = customtkinter.CTkLabel(janela.tab('Consulta'), text='{}\n{}\n\n{}'
                 .format(info[2], '> Preço Teto (Bazin)', '> Cotação'), font=("Consolas", 13),
                     text_color='light green', fg_color='transparent', corner_radius=5, justify='left')
             l3.place(x=140, y=85)
 
-            consulta_corrente = [[info[3], l1, l0, l3]]
+            consulta_corrente = [[info[3], l1, l0, l3, rotulo_img]]
 
             self.alterarBotoes()
 
@@ -292,12 +298,14 @@ class InterfaceConsulta:
                 rotulo[1].destroy()
                 rotulo[2].destroy()
                 rotulo[3].destroy()
+                rotulo[4].destroy()
             consulta_corrente.clear()
 
         if janela_nome == 'Carteira':
             for rotulo in carteira_corrente:
                 rotulo[1].destroy()
                 rotulo[2].destroy()
+                rotulo[3].destroy()
             carteira_corrente.clear()
             carteira = Arquivo().ler()
             InterfaceCarteira(carteira)
@@ -416,16 +424,29 @@ def apagarBotaoRe():
         pass
 
 def criarRotulo(info, ticker, local='Carteira'):
+
+    caminho = f"img/{ticker[:4]}.jpg"
+    imagem = None
+
+    if os.path.exists(caminho):
+        imagem = customtkinter.CTkImage(dark_image=Image.open(caminho), size=(30, 30))
+    else:
+        print("Imagem não encontrada!")
+
     l1 = customtkinter.CTkButton(janela.tab(local), text=status(1, info, ticker),
-                                 font=("Consolas", 14), text_color='white', fg_color='gray26', corner_radius=7,
-                                 width=30,
-                                 anchor='w', height=10)
+                                font=("Consolas", 14), text_color='white', fg_color='gray26', corner_radius=7,
+                                width=70,
+                                anchor='w', height=10)
 
     l0 = customtkinter.CTkLabel(janela.tab(local), text=status(0, info), font=("Consolas", 14),
                                 text_color=statusCor(info), fg_color='transparent', corner_radius=7, width=110,
                                 anchor='w')
 
-    return l1, l0
+    rotulo_img = customtkinter.CTkLabel(janela.tab(local), text='', fg_color='transparent', corner_radius=4,
+                                image=imagem,
+                                width=5, height=33)
+
+    return l1, l0, rotulo_img
 
 if __name__ == '__main__':
 
@@ -441,6 +462,7 @@ if __name__ == '__main__':
 
     root.criarDimensao()
     janela = root.criarJanela()
+
     titulo_j1 = root.criarTitulo()
     entrada = root.criarEntrada()
     botao_adicionar = root.criarBotao()
