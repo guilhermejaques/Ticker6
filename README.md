@@ -23,7 +23,9 @@ Faça o teste, contribua e aproveite!
   
 - Sobre a modularização, o código principal executável é `main.pyw` e faz requisição a uma lista de ativos válidos que está em `validos.py`.
   
-- O código faz a criação de um arquivo `.ativos.txt` (ou .CSV na versão atual) onde estará registrado todos os ativos permanentes que o usuário definir dentro do programa. O arquivo simples facilita a manutenção dos ativos na carteira para qualquer tipo de usuário.   
+- O código faz a criação de um arquivo `.ativos.txt` (ou .**CSV** na versão atual) onde estará registrado todos os ativos permanentes que o usuário definir dentro do programa. O arquivo simples facilita a manutenção dos ativos na carteira para qualquer tipo de usuário.
+
+- Para as versões mais recentes do código, existe a pasta `img` que armazena imagens de logomarca das empresas da B3. 
 
 # Requisitos
 
