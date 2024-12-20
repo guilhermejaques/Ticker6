@@ -1,9 +1,9 @@
 from validos import ativos_validos
-import yfinance
-import customtkinter
-import csv
 from random import randint
 from PIL import Image
+import customtkinter
+import yfinance
+import csv
 import os
 
 # versão
@@ -137,7 +137,7 @@ class Interface:
         return botao_remover
 
     def gerarInterface(self):
-        #self.atualizarInterface()
+        self.atualizarInterface()
         try:
             self.root.mainloop()
         except KeyboardInterrupt:
@@ -187,7 +187,9 @@ class InterfaceCarteira:
                 l1, l0, rotulo_img = criarRotulo(info, ticker)
                 l1.place(x=x, y=80)
                 l0.place(x=x-2, y=125)
-                rotulo_img.place(x=x+80, y=79)
+
+                if rotulo_img.cget("text") == '':
+                    rotulo_img.place(x=x+80, y=79)
 
                 carteira_corrente.append([ticker, l1, l0, rotulo_img])
                 x = x + 170
@@ -201,7 +203,9 @@ class InterfaceCarteira:
                 l1, l0, rotulo_img = criarRotulo(info, ticker)
                 l1.place(x=x, y=80)
                 l0.place(x=x-2, y=125)
-                rotulo_img.place(x=x+80, y=79)
+
+                if rotulo_img.cget("text") == '':
+                    rotulo_img.place(x=x+80, y=79)
 
                 carteira_corrente.append([ticker, l1, l0, rotulo_img])
                 x = x + 170
@@ -214,7 +218,9 @@ class InterfaceCarteira:
                 l1, l0, rotulo_img = criarRotulo(info, ticker)
                 l1.place(x=x, y=200)
                 l0.place(x=x-2, y=245)
-                rotulo_img.place(x=x+80, y=199)
+
+                if rotulo_img.cget("text") == '':
+                    rotulo_img.place(x=x+80, y=199)
 
                 carteira_corrente.append([ticker, l1, l0, rotulo_img])
                 x = x + 170
@@ -249,7 +255,9 @@ class InterfaceConsulta:
             l1, l0, rotulo_img = criarRotulo(info, ticker=info[3], local='Consulta')
             l1.place(x=20, y=80)
             l0.place(x=18, y=125)
-            rotulo_img.place(x=20+80, y=79)
+
+            if rotulo_img.cget("text") == '':
+                rotulo_img.place(x=20+80, y=79)
 
             l3 = customtkinter.CTkLabel(janela.tab('Consulta'), text='{}\n{}\n\n{}'
                 .format(info[2], '> Preço Teto (Bazin)', '> Cotação'), font=("Consolas", 13),
@@ -281,7 +289,6 @@ class InterfaceConsulta:
 
             if len(consulta_corrente) == 0:
                 botao_adicionar.configure(hover_color='red', command=None)
-
 
     def adicionarAtivo(self):
         if len(carteira_corrente) < 8:
@@ -428,11 +435,6 @@ def criarRotulo(info, ticker, local='Carteira'):
     caminho = f"img/{ticker[:4]}.jpg"
     imagem = None
 
-    if os.path.exists(caminho):
-        imagem = customtkinter.CTkImage(dark_image=Image.open(caminho), size=(30, 30))
-    else:
-        print("Imagem não encontrada!")
-
     l1 = customtkinter.CTkButton(janela.tab(local), text=status(1, info, ticker),
                                 font=("Consolas", 14), text_color='white', fg_color='gray26', corner_radius=7,
                                 width=70,
@@ -442,11 +444,19 @@ def criarRotulo(info, ticker, local='Carteira'):
                                 text_color=statusCor(info), fg_color='transparent', corner_radius=7, width=110,
                                 anchor='w')
 
-    rotulo_img = customtkinter.CTkLabel(janela.tab(local), text='', fg_color='transparent', corner_radius=4,
-                                image=imagem,
-                                width=5, height=33)
+    if os.path.exists(caminho):
+        imagem = customtkinter.CTkImage(dark_image=Image.open(caminho), size=(30, 30))
+
+        rotulo_img = customtkinter.CTkLabel(janela.tab(local), text='', fg_color='transparent', corner_radius=4,
+                                            image=imagem,
+                                            width=5, height=33)
+    else:
+        rotulo_img = customtkinter.CTkLabel(janela.tab(local), text='N', fg_color='transparent', corner_radius=0,
+                                            image=imagem,
+                                            width=0, height=0)
 
     return l1, l0, rotulo_img
+
 
 if __name__ == '__main__':
 
