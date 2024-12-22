@@ -10,9 +10,10 @@ O programa depende dos dados fornecidos pela biblioteca [yFinance](https://githu
 Faça o teste, contribua e aproveite!
 
 ---
-![Janela Consulta](https://github.com/guilhermejaques/Ticker6/assets/159738624/4ac6a284-5cd0-41b7-8774-40cfb1579e9b)
+![Carteira](https://github.com/user-attachments/assets/b0bec184-258c-4f52-b5e6-648f306f87da)
 
-![Janela Carteira](https://github.com/guilhermejaques/Ticker6/assets/159738624/90c162ee-f7a2-4840-9992-dc30cc5c6614)
+![Consulta de Ativo](https://github.com/user-attachments/assets/7006eef4-b2be-4aa2-b5ce-bc5798eb2b70)
+
 
 ---
 # O código
