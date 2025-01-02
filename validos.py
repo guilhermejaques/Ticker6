@@ -408,6 +408,8 @@ ativos_validos = [
 "RNEW11",
 "BRGE11",
 "MODL11",
-"VTRU3"
+"VTRU3",
+"ISAE3",
+"ISAE4"
 ]
 
