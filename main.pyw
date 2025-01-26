@@ -7,7 +7,7 @@ import csv
 import os
 
 # versão
-vers = 'v0.2.0'
+vers = 'v0.2.1'
 
 
 # dividend yield (%) - retorno esperado:
@@ -16,7 +16,7 @@ dy = 0.06 #6%
 anos = 5
 
 
-class Ativo:
+class Ativo: # referente aos ativos e consulta (yfinance)
 
     def __init__(self, ticker):
         self.ticker = ticker.upper().strip()
@@ -68,7 +68,7 @@ class Ativo:
                 pass
 
 
-class Interface:
+class Interface: # referente a estrutura gráfica (executável) do customtkinter
 
     def __init__(self):
         self.root = customtkinter.CTk()
@@ -168,10 +168,10 @@ class Interface:
                 l0.configure(text=status(0, info), text_color=statusCor(info))
                 l3.configure(text='{}\n{}\n\n{}'.format(info[2], '> Preço Teto (Bazin)', '> Cotação'))
 
-        self.root.after(300000, self.atualizarInterface) #5min
+        self.root.after(600000, self.atualizarInterface) #10min
 
 
-class InterfaceCarteira:
+class InterfaceCarteira: # referente a janela carteira no programa
 
     def __init__(self, lista):
         global titulo_j1, msg, carteira_corrente, carteira
@@ -241,7 +241,7 @@ class InterfaceCarteira:
             apagarMsg()
 
 
-class InterfaceConsulta:
+class InterfaceConsulta: # referente a janela de consulta no programa
 
     def __init__(self):
         global consulta_corrente
@@ -330,12 +330,12 @@ class InterfaceConsulta:
         apagarBotaoRe()
 
 
-class Arquivo:
+class Arquivo: # manipulação de arquivos
 
     def ler(self, nome_arquivo='.ativos.csv'):
         lista = []
         try:
-            with open(f'{nome_arquivo}', 'r', newline='', encoding='UTF-8') as self.arquivo:
+            with open(dir, 'r', newline='', encoding='UTF-8') as self.arquivo:
                 conteudo = csv.reader(self.arquivo)
                 lista = [ticker.upper() for linha in conteudo for ticker in linha]
             self.fechar()
@@ -349,21 +349,21 @@ class Arquivo:
             return lista
 
     def escrever(self):
-        with open('.ativos.csv', 'a', newline='', encoding='UTF-8') as self.arquivo:
+        with open(dir, 'a', newline='', encoding='UTF-8') as self.arquivo:
             ticker = consulta_corrente[0][0]
             escritor = csv.writer(self.arquivo)
             escritor.writerow([ticker])
         self.fechar()
 
     def reescrever(self, conteudo):
-        with open('.ativos.csv', 'w+', newline='', encoding='UTF-8') as self.arquivo:
+        with open(dir, 'w+', newline='', encoding='UTF-8') as self.arquivo:
             escritor = csv.writer(self.arquivo)
             for ticker in conteudo:
                 escritor.writerow([ticker])
         self.fechar()
 
     def criar(self):
-        with open('.ativos.csv', 'x', encoding='UTF-8') as self.arquivo:
+        with open(dir, 'x', encoding='UTF-8') as self.arquivo:
             pass
         self.fechar()
 
@@ -389,10 +389,7 @@ def status(local, info, nome_ticker=None):
 
         return info
 
-def statusCor(info):
-    """
-    tratamento de cor da informação a ser retornada
-    """
+def statusCor(info): # tratamento de cor da informação a ser retornada
     if float(info[1]) <= float(info[0]):
         cor = 'light green'
     else:
@@ -400,38 +397,28 @@ def statusCor(info):
 
     return cor
 
-def aviso(mensagem, local='Carteira'):
-    """
-    definição de rótulo para mensagem
-    """
+def aviso(mensagem, local='Carteira'): # definição de rótulo de mensagem
     aviso_ = customtkinter.CTkLabel(janela.tab(f'{local}'), text=f'{mensagem}', font=("arial bold", 13),
         text_color='gray', fg_color='transparent')
     aviso_.pack(pady=100)
 
     return aviso_
 
-def apagarMsg():
-    """
-    excluir rótulo de mensagem
-    """
+def apagarMsg(): # excluir rótulo de mensagem
     global msg
     try:
         msg.destroy()
     except AttributeError:
         pass
 
-def apagarBotaoRe():
-    """
-    excluir rótulo botão remover
-    """
+def apagarBotaoRe(): # excluir rótulo botão remover
     global botao_remover
     try:
         botao_remover.destroy()
     except NameError:
         pass
 
-def criarRotulo(info, ticker, local='Carteira'):
-
+def criarRotulo(info, ticker, local='Carteira'): # criação de rótulo (com textos e imagem)
     caminho = f"img/{ticker[:4]}.jpg"
     imagem = None
 
@@ -466,6 +453,9 @@ if __name__ == '__main__':
     consulta_corrente = []
     # mensagem, avisos
     msg = None
+    # diretório
+    dir_padrao = os.path.expanduser("~")
+    dir = os.path.join(dir_padrao, '.ativos.csv')
 
     ##
     root = Interface()
