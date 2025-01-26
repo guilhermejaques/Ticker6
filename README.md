@@ -1,7 +1,7 @@
 
 # Descrição 
 
-Esta automação é um projeto individual em andamento e que pode ser utilizada por estudantes ou investidores. Por trás da interface gráfica [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) existe um algoritmo que é muito simples e eficaz, escrito na linguagem de programação Python. 
+Essa automação é um projeto individual em andamento e que pode ser utilizada por estudantes ou investidores. Por trás da interface gráfica [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) existe um algoritmo que é muito simples e eficaz, escrito na linguagem de programação Python. 
 
 Ticker6 é o nome do programa e, com ele, você poderá consultar a cotação atualizada das ações e vizualizar o preço teto sem a necessidade de calcular e buscar os dados em sites. Também é possível armazenar os ativos favoritos em uma carteira. 
 
@@ -24,9 +24,9 @@ Faça o teste, contribua e aproveite!
   
 - Sobre a modularização, o código principal executável é `main.pyw` e faz requisição a uma lista de ativos válidos que está em `validos.py`.
   
-- O código faz a criação de um arquivo `.ativos.txt` (ou .**CSV** na versão atual) onde estará registrado todos os ativos permanentes que o usuário definir dentro do programa. O arquivo simples facilita a manutenção dos ativos na carteira para qualquer tipo de usuário.
+- O código faz a criação de um arquivo `.ativos.txt` (ou .**CSV** na versão atual) onde estará registrado todos os ativos permanentes que o usuário definir dentro do programa. O arquivo simples facilita a manutenção dos ativos na carteira.
 
-- Para as versões mais recentes do código, existe a pasta `img` que armazena imagens de logomarca das empresas da B3. 
+- Para as versões mais recentes do programa, existe a pasta `img` que armazena imagens de logomarca das empresas da B3. 
 
 # Requisitos
 
@@ -35,14 +35,13 @@ Faça o teste, contribua e aproveite!
   **Bibliotecas:**
 - yFinance 0.2.40
 - CustomTkinter 5.2.2
-- Pillow 10.4.0 (Necessária a partir da versão 0.2.0 do TICKER6)
+- Pillow 10.4.0 (Necessário a partir da versão 0.2.0 do Ticker6)
 
 
 # Como usar / Instalar
 
-Além da instalação do [Python](https://www.python.org/downloads/), você precisará do arquivo `main.pyw` que será executado, e do arquivo `validos.py` que é necessário para o funcionamento do programa. Apenas deixe-os na mesma pasta (como no repositório); por fim, será necessário a instalação das bibliotecas.
 
-Como em qualquer outro repositório, ao fazer o download ou clonagem, os arquivos já estarão na estrutura ideal para uso. E contanto que o usuário mantenha os arquivos citados acima no mesmo diretório, não haverá problemas para iniciar.
+Além da instalação do [Python](https://www.python.org/downloads/) e PIP, você precisará do arquivo `main.pyw` que será executado, e do arquivo `validos.py` que é necessário para o funcionamento do programa. Apenas deixe-os na mesma pasta (como no repositório); por fim, será necessário a instalação das bibliotecas.
 
 ---
 Você pode fazer o download das bibliotecas através de um terminal utilizando o arquivo `requirements.txt` que está no repositório, e com o comando `pip install -r requirements.txt` você fará a instalação das bibliotecas necessárias diretamente do arquivo. 
@@ -50,7 +49,7 @@ Você pode fazer o download das bibliotecas através de um terminal utilizando o
 E claro! também é possível fazer a instalação utilizando o `pip install` para cada uma das bibliotecas. 
 
 # Executável para windows
-Você pode fazer o [download](https://github.com/guilhermejaques/Ticker6/releases/tag/EXE) do executável... 
+Embora o uso do repositório seja mais recomendado, você pode fazer o [download](https://github.com/guilhermejaques/Ticker6/releases/tag/EXE) do executável se assim desejar.
 
 # O que é o preço teto de uma ação?
 
