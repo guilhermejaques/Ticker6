@@ -1,10 +1,11 @@
-from validos import ativos_validos
+import os
+import sys
+import csv
 from random import randint
 from PIL import Image
-import customtkinter
 import yfinance
-import csv
-import os
+import customtkinter
+from validos import ativos_validos
 
 # versão
 vers = 'v0.2.1'
@@ -168,7 +169,7 @@ class Interface: # referente a estrutura gráfica (executável) do customtkinter
                 l0.configure(text=status(0, info), text_color=statusCor(info))
                 l3.configure(text='{}\n{}\n\n{}'.format(info[2], '> Preço Teto (Bazin)', '> Cotação'))
 
-        self.root.after(600000, self.atualizarInterface) #10min
+        self.root.after(600000, self.atualizarInterface) # 10min para atualização dos rótulos
 
 
 class InterfaceCarteira: # referente a janela carteira no programa
@@ -371,7 +372,7 @@ class Arquivo: # manipulação de arquivos
         self.arquivo.close()
 
 
-#
+# funções gerais
 def status(local, info, nome_ticker=None):
     """
     tratamento da informação a ser retornada no rótulo
@@ -419,7 +420,7 @@ def apagarBotaoRe(): # excluir rótulo botão remover
         pass
 
 def criarRotulo(info, ticker, local='Carteira'): # criação de rótulo (com textos e imagem)
-    caminho = f"img/{ticker[:4]}.jpg"
+    caminho = diretorio(ticker)
     imagem = None
 
     l1 = customtkinter.CTkButton(janela.tab(local), text=status(1, info, ticker),
@@ -445,6 +446,14 @@ def criarRotulo(info, ticker, local='Carteira'): # criação de rótulo (com tex
     return l1, l0, rotulo_img
 
 
+def diretorio(ticker):
+    if hasattr(sys, '_MEIPASS'):
+        caminho = os.path.join(sys._MEIPASS, 'img', f'{ticker[:4]}.jpg')
+    else:
+        caminho = os.path.join('img', f'{ticker[:4]}.jpg')
+    return caminho
+
+
 if __name__ == '__main__':
 
     # ativos e rótulos que estão em 'carteira' em execução
@@ -453,6 +462,7 @@ if __name__ == '__main__':
     consulta_corrente = []
     # mensagem, avisos
     msg = None
+
     # diretório
     dir_padrao = os.path.expanduser("~")
     dir = os.path.join(dir_padrao, '.ativos.csv')
