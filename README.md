@@ -33,9 +33,9 @@ Faça o teste, contribua e aproveite!
 - Python 3.8 (ou superior) com PIP
   
   **Bibliotecas:**
-- yFinance 0.2.40
-- CustomTkinter 5.2.2
-- Pillow 10.4.0 (Necessário a partir da versão 0.2.0 do Ticker6)
+- yFinance 
+- CustomTkinter 
+- Pillow (Necessário a partir da versão 0.2.0 do Ticker6)
 
 
 # Como usar / Instalar
